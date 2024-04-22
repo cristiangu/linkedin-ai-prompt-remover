@@ -21,5 +21,5 @@
 
 
 ### Show your support
-* Follow me on Twitter [@iamadamdev](https://twitter.com/GutuCristian) or [LinkedIn](https://www.linkedin.com/in/cristiangutu/) for updates.
+* Follow me on Twitter [@GutuCristian](https://twitter.com/GutuCristian) or [LinkedIn](https://www.linkedin.com/in/cristiangutu/) for updates.
 * Star this repo.
