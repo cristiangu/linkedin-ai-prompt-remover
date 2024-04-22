@@ -19,5 +19,6 @@
   "background": {
     "service_worker": "scripts/background.js"
   },
-  "action": {}
+  "action": {},
+  "permissions": ["tabs"]
 }

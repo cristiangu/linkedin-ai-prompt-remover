@@ -1,16 +1,17 @@
-let removedAIPromptsCounter = 0;
-
 function removeAIPostPrompts() {
   const aiPostPrompts = document.getElementsByClassName(
     "coach-shared-hscroll-bar__multi-container"
   );
 
   if (aiPostPrompts) {
+    const cssToHide = "display:none !important";
     for (let prompt of aiPostPrompts) {
-      prompt.parentNode.style.cssText = "display:none !important";
+      if (prompt.parentNode.style.cssText.includes(cssToHide)) continue;
+      prompt.parentNode.style.cssText = cssToHide;
     }
-    removedAIPromptsCounter += aiPostPrompts.length;
-    chrome.runtime.sendMessage({ count: removedAIPromptsCounter });
+    chrome.runtime.sendMessage({
+      count: aiPostPrompts.length,
+    });
   }
 }
 
@@ -28,3 +29,5 @@ observer.observe(document.getElementById("artdeco-hoverable-outlet"), config);
 addEventListener("load", (event) => {
   removeAIPostPrompts();
 });
+
+removeAIPostPrompts();

@@ -15,13 +15,33 @@ function nFormatter(num, digits) {
     : "0";
 }
 
+function getCurrentTab(callback) {
+  let queryOptions = { active: true, lastFocusedWindow: true };
+  chrome.tabs.query(queryOptions, ([tab]) => {
+    if (chrome.runtime.lastError) console.error(chrome.runtime.lastError);
+    // `tab` will either be a `tabs.Tab` instance or `undefined`.
+    callback(tab);
+  });
+}
+
 // Listen to content.js events
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.count || request.count === 0) {
-    chrome.action.setBadgeBackgroundColor({ color: "#0a66c2" });
-    chrome.action.setBadgeTextColor({ color: "#ffffff" });
+  if (request.count > 0) {
+    getCurrentTab((tab) => {
+      chrome.action.setBadgeBackgroundColor({
+        color: "#0a66c2",
+        tabId: tab.id,
+      });
+      chrome.action.setBadgeTextColor({
+        color: "#ffffff",
+        tabId: tab.id,
+      });
 
-    chrome.action.setBadgeText({ text: nFormatter(request.count, 1) });
+      chrome.action.setBadgeText({
+        text: nFormatter(request.count, 1),
+        tabId: tab.id,
+      });
+    });
   }
   sendResponse(true);
   return true;
