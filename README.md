@@ -25,6 +25,8 @@ After you install it, just refresh your LinkedIn tab.
 ### Badge Counter
 This extension will show a badge with a counter, the counter represents the number of posts that have been AI-swept. The counter is isolated for each tab, and it's cleared on page refresh.
 
+<img src="/counter.png" width="200" />
+
 ### Show your support
 * Follow me on Twitter [@GutuCristian](https://twitter.com/GutuCristian) or [LinkedIn](https://www.linkedin.com/in/cristiangutu/) for updates.
 * Star this repo.
