@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "LinkedIn AI Prompt Remover",
+  "name": "LI AI Prompt Remover",
   "version": "1.0",
-  "description": "Removes the AI prompt suggestion from each post on LinkedIn.",
+  "description": "Removes the AI prompt suggestions from each post on LinkedIn.",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
