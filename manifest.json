@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn AI Prompt Remover",
+  "version": "1.0",
+  "description": "Removes the AI prompt suggestion from each post on LinkedIn.",
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "run_at": "document_end",
+      "matches": ["https://www.linkedin.com/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "action": {}
+}
