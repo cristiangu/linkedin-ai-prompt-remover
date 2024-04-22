@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="/ai-prompts.png" width="650" height="330"/>
+  <img src="/ai-prompts.png" width="650" />
 </p>
 
 <h1 align="center">LinkedIn AI Prompt Remover</h1>
