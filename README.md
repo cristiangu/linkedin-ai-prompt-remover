@@ -19,7 +19,13 @@
 1. Enable Developer Mode.
 1. Drag the `linkedin-ai-prompt-remover-main` folder anywhere on the page to import it (do not delete the folder afterwards).
 
+### Usage Instructions
+After you install it, just refresh your LinkedIn tab. 
+
+### Badge Counter
+This extension will show a badge with a counter, the counter represents the number of posts that have been AI-swept. The counter is isolated for each tab, and it's cleared on page refresh.
 
 ### Show your support
 * Follow me on Twitter [@GutuCristian](https://twitter.com/GutuCristian) or [LinkedIn](https://www.linkedin.com/in/cristiangutu/) for updates.
 * Star this repo.
+
